@@ -17,5 +17,6 @@ public class Main {
 
         test.setVisible(true);
         test.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        System.out.println("test git");
     }
 }
