@@ -9,16 +9,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="">
-      <library>
-        <CLASSES>
-          <root url="file://$APPLICATION_HOME_DIR$/externJar" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-        <jarDirectory url="file://$APPLICATION_HOME_DIR$/externJar" recursive="false" />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="libs" level="project" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">
