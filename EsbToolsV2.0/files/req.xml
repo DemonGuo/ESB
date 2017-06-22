@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service>
+    <sys-header>
+        <data name="SYS_HEAD">
+            <struct>
+                <data name="SOURCE_TYPE">
+                    <field type="string" length="2" scale="0">11</field>
+                </data>
+                <data name="PROVIDER_ID">
+                    <field type="string" length="6" scale="0">201020</field>
+                </data>
+                <data name="TRAN_TIMESTAMP">
+                    <field type="string" length="9" scale="0">104611365</field>
+                </data>
+                <data name="USER_ID">
+                    <field type="string" length="10" scale="0">000214</field>
+                </data>
+                <data name="CONSUMER_SEQ_NO">
+                    <field type="string" length="52" scale="0">10102020170620010002159805</field>
+                </data>
+                <data name="WS_ID">
+                    <field type="string" length="30" scale="0">0A048165</field>
+                </data>
+                <data name="AUTH_USER_ID_ARRAY">
+                    <array>
+                        <struct>
+                            <data name="AUTH_CHECK_FLAG">
+                                <field type="string" length="3" scale="0"/>
+                            </data>
+                            <data name="AUTH_CHECK_MSG">
+                                <field type="string" length="30" scale="0"/>
+                            </data>
+                            <data name="AUTH_USER_ID">
+                                <field type="string" length="30" scale="0"/>
+                            </data>
+                        </struct>
+                    </array>
+                </data>
+                <data name="BRANCH_ID">
+                    <field type="string" length="20" scale="0">330100</field>
+                </data>
+                <data name="SERVICE_SCENE">
+                    <field type="string" length="2" scale="0">01</field>
+                </data>
+                <data name="CONSUMER_ID">
+                    <field type="string" length="6" scale="0">101020</field>
+                </data>
+                <data name="SERVICE_CODE">
+                    <field type="string" length="30" scale="0">03006000008</field>
+                </data>
+                <data name="TRAN_DATE">
+                    <field type="string" length="8" scale="0">20170620</field>
+                </data>
+            </struct>
+        </data>
+    </sys-header>
+    <app-header>
+        <data name="APP_HEAD">
+            <struct>
+                <data name="PAGE_END">
+                    <field type="string" length="10" scale="0"/>
+                </data>
+                <data name="CURRENT_NUM">
+                    <field type="string" length="10" scale="0"/>
+                </data>
+                <data name="PGUP_OR_PGDN">
+                    <field type="string" length="52" scale="0"/>
+                </data>
+                <data name="BUSS_SEQ_NO">
+                    <field type="string" length="52" scale="0">10102020170620010002159805</field>
+                </data>
+                <data name="PAGE_START">
+                    <field type="string" length="10" scale="0"/>
+                </data>
+                <data name="TOTAL_NUM">
+                    <field type="string" length="10" scale="0"/>
+                </data>
+                <data name="REVERSAL_SEQ_NO">
+                    <field type="string" length="52" scale="0"/>
+                </data>
+                <data name="REVERSAL_TRAN_TYPE">
+                    <field type="string" length="4" scale="0"/>
+                </data>
+            </struct>
+        </data>
+    </app-header>
+    <local-header>
+        <data name="LOCAL_HEAD">
+            <struct>
+            </struct>
+        </data>
+    </local-header>
+    <body>
+        <data name="BODY">
+            <struct>
+                <data name="SETTLE_DATE">
+                    <field type="string" length="8" scale="0">20170524</field>
+                </data>
+            </struct>
+        </data>
+    </body>
+</service>
