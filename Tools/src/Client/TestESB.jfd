@@ -1,0 +1,310 @@
+JFDML JFormDesigner: "5.2.4.0.321" Java: "1.8.0_25" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::p, comp tabbedPane1:::p:693:p, space ::30:x}}"
+			"$verticalGroup": "par l {seq l {comp tabbedPane1:::p:486:p, space :0:25:x}}"
+		} ) {
+			name: "this"
+			"title": "ESB_Tools"
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowClosed", "thisWindowClosed", true ) )
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "tabbedPane1"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {seq l {par l {par t:::p {comp btn_EditXLS::::172:x, comp btn_choosexls::::172:x}, comp btn_ChooseSvn::l:p:170:p}, space u:::p, par l:::p {comp t_SvnPath::::481:x, comp t_ExcelPath::::481:x}}, seq l {comp btn_choosepath:::p:170:p, space u:::p, comp t_VerPathLast:::p:483:p}, seq l {space :p:15:p, comp label12:::p::p, space s:::p, comp tSrcIP:::p:124:p, space :p:33:p, comp textField1:::p:79:p, space :::p, comp label16:::p::p, space s:::p, comp tDstIP:::p:124:p}, seq l {comp btn_CreateVer2:::p:170:p, space u:::p, comp t_VerResult:::p:483:p}, comp btn_ChooseSvn2::l:p:170:p, comp btn_CreateSh::l:p::p, comp btn_CreateSh2::l:p:170:p}, space :0:20:x}}"
+					"$verticalGroup": "par l {seq l {space :::p, par b {comp btn_choosexls::b:p:25:p, comp t_ExcelPath::b:p:24:p}, space :::p, comp btn_EditXLS:::p:25:p, space :::p, par b {comp t_SvnPath::b:p:24:p, comp btn_ChooseSvn::b:p:25:p}, space u:::p, comp btn_ChooseSvn2:::p:25:p, space :p:14:p, par l {par b:t {comp tSrcIP::b:p:24:p, comp textField1::b:p::p, comp label16::b:p::p, comp tDstIP::b:p:24:p}, comp label12::t:p::p}, space u:::p, par b {comp btn_CreateVer2::b:p:25:p, comp t_VerResult::b:p:24:p}, space :::p, par b {comp btn_choosepath::b:p:25:p, comp t_VerPathLast::b:p:24:p}, space :::p, comp btn_CreateSh:::p:25:p, space s:::p, comp btn_CreateSh2:::p:25:p, space ::147:x}}"
+				} ) {
+					name: "panel2"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_choosexls"
+						"text": "0-选择版本清单excel"
+						"horizontalAlignment": 2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_choosexlsActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "t_ExcelPath"
+						"editable": false
+						"foreground": new java.awt.Color( 0, 0, 0, 255 )
+						"border": new javax.swing.border.EtchedBorder( 0, sfield java.awt.Color pink, null )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_EditXLS"
+						"text": "1-编辑版本清单"
+						"horizontalAlignment": 2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_EditXLSActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_CreateVer2"
+						"text": "4-打包全量版本"
+						"horizontalAlignment": 2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_CreateVer2ActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "t_VerResult"
+						"border": &EtchedBorder0 new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color green, null )
+						"editable": false
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "t_VerPathLast"
+						"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color green, null )
+						"background": new java.awt.Color( 204, 255, 204, 255 )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_choosepath"
+						"text": "5-选择最终版本的路径"
+						"actionCommand": "3-选择版本文件夹"
+						"horizontalAlignment": 2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_choosepathActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_CreateSh"
+						"text": "6-生成最终版本的脚本"
+						"horizontalAlignment": 2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_CreateShActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "t_SvnPath"
+						"border": #EtchedBorder0
+						"editable": false
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label12"
+						"text": "源版本所在服务器:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "tSrcIP"
+						"border": #EtchedBorder0
+						"editable": false
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label16"
+						"text": "目标版本所在服务器:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "tDstIP"
+						"border": #EtchedBorder0
+						"editable": false
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_ChooseSvn"
+						"text": "2-选择本地SVN目录"
+						"horizontalAlignment": 2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_ChooseSvnActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField1"
+						"text": "》》》》》"
+						"editable": false
+						"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_CreateSh2"
+						"text": "修改默认配置"
+						"border": new javax.swing.border.BevelBorder( 1, sfield java.awt.Color red, sfield java.awt.Color red, sfield java.awt.Color red, sfield java.awt.Color red )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_CreateSh2ActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_ChooseSvn2"
+						"text": "3-更新本地SVN"
+						"horizontalAlignment": 2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_ChooseSvn2ActionPerformed", true ) )
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "ESB版本打包"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {seq l {par l:::p {seq l {par l {seq l {comp label1:::p:48:p, space s:::p, comp t_IP:::p:99:p}, seq l {comp label7:::p:103:p, space u:::p, comp t_HeadLen:::p:50:p}}, space s:::p, par l:::p {seq l {comp label2:::p:80:p, space :::x, comp t_PORT:::p:50:p}, seq l {comp label8:::p::p, space u:::p, comp t_RevLen:::p:50:p}}, space :p:60:p}, seq l {comp label3:::p:80:p, space :::x, comp t_Address:::p:314:p, space :::p}}, par l {comp btn_HTTP::::269:x, comp btn_TCP::t:::x}}, seq {comp scrollPane1:::p:103:p, space u:::p, comp list_Env:::p:100:p, space ::96:x, comp btn_:::p:130:p, space s:::p, comp label9:::p::p, space :p:27:p, comp t_Times:::p:56:p, space :p:35:p}, seq l {comp label4:::p:80:p, space :::p, comp scrollPane2::::593:x}}, space :::p}}"
+					"$verticalGroup": "par l {seq t {space :p:14:p, par t {par b:t {comp t_Times::b:p:25:p, comp label9::b:p:25:p, comp btn_::b:p:25:p}, comp scrollPane1::t:p:25:p, comp list_Env::t:p:25:p}, space u:::p, par b {comp label7::b:p:25:p, comp t_HeadLen::b:p:25:p, comp label8::b:p:25:p, comp t_RevLen::b:p:25:p}, space :p:6:p, par b {comp label1::b:p:25:p, comp t_IP::b:p:25:p, comp label2::b:p:24:p, comp btn_TCP::b:p:25:p, comp t_PORT::b:p:24:p}, space :p:7:p, par b {comp label3::b:p:25:p, comp t_Address::b:p:25:p, comp btn_HTTP::b:p:25:p}, space s:::p, par l {comp label4:::p::p, comp scrollPane2:::p:272:p}, space ::28:x}}"
+				} ) {
+					name: "panel1"
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "textArea1"
+							"text": "环境参数："
+							"font": new java.awt.Font( "Microsoft YaHei UI", 0, 14 )
+							"editable": false
+							"autoscrolls": false
+							"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color cyan, null )
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "list_Env"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "开发环境"
+							addElement( "开发环境" )
+							addElement( "测试环境" )
+							addElement( "回归环境" )
+						}
+						"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color magenta, null )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "list_EnvActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_"
+						"text": "编辑请求报文"
+						"horizontalAlignment": 2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_ActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label7"
+						"text": "请求报文头长度:"
+						"border": &EtchedBorder1 new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color cyan, null )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "t_HeadLen"
+						"text": "8"
+						"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color magenta, null )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label8"
+						"text": "接收报文头长度:"
+						"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color cyan, null )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "t_RevLen"
+						"text": "8"
+						"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color magenta, null )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"text": "TCP_IP:"
+						"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color cyan, null )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "t_IP"
+						"text": "10.4.16.231"
+						"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color magenta, null )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "TCP_PORT:"
+						"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color cyan, null )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "t_PORT"
+						"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color magenta, null )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_TCP"
+						"text": "发送TCP"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_TCPActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_HTTP"
+						"text": "发送HTTP"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_HTTPActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "t_Address"
+						"text": "http://10.4.16.231:38080/***"
+						"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color magenta, null )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "HTTP_ADD:"
+						"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color cyan, null )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label9"
+						"text": "循环发送次数："
+						"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color cyan, null )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "t_Times"
+						"text": "1"
+						"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color magenta, null )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label4"
+						"text": "返回报文："
+						"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color cyan, null )
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane2"
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "t_AreaRsp"
+							"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color pink, null )
+						} )
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "ESB报文测试"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {par l {seq {space :p:14:p, par t {comp label14:::p:128:p, par l:::p {comp label13::l::127:x, comp btn_ch::l:p::p, comp btn_dcit::l:p::p, comp label11::l::127:x}, comp label15::t:p:128:p}, space s:::p, par l:::p {comp tf_XlsDict::l::500:x, comp tf_XlsCh::l::500:x, comp tf_ShtDict::l:p:260:p, comp tf_ShtCh::l:p:260:p, comp tf_ShtOut::l:p:260:p, comp tf_XlsOut::l::500:x}}, seq l {space :p:265:p, comp btn_Convert:::p::p}}, space ::31:x}}"
+					"$verticalGroup": "par l {seq l {space :p:15:p, par b {comp btn_dcit::b:p:27:p, comp tf_XlsDict::b:p::p}, space :::p, par b {comp label11::b:p:25:p, comp tf_ShtDict::b:p::p}, space u:::p, par b {comp btn_ch::b:p:27:p, comp tf_XlsCh::b:p::p}, space u:::p, par b {comp label13::b:p:25:p, comp tf_ShtCh::b:p::p}, space :p:7:p, comp btn_Convert:::p:27:p, space :::p, par b {comp label14::b:p:25:p, comp tf_XlsOut::b:p::p}, space u:::p, par b {comp label15::b:p:25:p, comp tf_ShtOut::b:p::p}, space ::198:x}}"
+				} ) {
+					name: "panel3"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label11"
+						"text": "源字段sheet页"
+						"border": #EtchedBorder1
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "tf_XlsDict"
+						"text": "D:/泰隆_数据字典.xlsx"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "tf_ShtCh"
+						"text": "dict_ch"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "tf_XlsCh"
+						"text": "D:/Dict_CH.xlsx"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label13"
+						"text": "中文字段sheet页"
+						"border": #EtchedBorder1
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "tf_ShtDict"
+						"text": "表2中英文名称及缩写对照表"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label14"
+						"text": "结果文件存放路径"
+						"border": #EtchedBorder1
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "tf_XlsOut"
+						"text": "D:/Dict_EN.xlsx"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label15"
+						"text": "结果表名"
+						"border": #EtchedBorder1
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "tf_ShtOut"
+						"text": "dict_en"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_dcit"
+						"text": "泰隆数据字典"
+						"horizontalAlignment": 2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_dcitChoose", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_ch"
+						"text": "中文字段文件"
+						"horizontalAlignment": 2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_chChoose", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_Convert"
+						"text": "转换"
+						"horizontalAlignment": 2
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btn_ConvertAction", true ) )
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "ESB字典工具"
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 745, 550 )
+		} )
+	}
+}
