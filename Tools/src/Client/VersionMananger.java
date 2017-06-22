@@ -811,7 +811,7 @@ public class VersionMananger {
             if(sSub[i].startsWith("TLBank_SmartEsb_AP_")) {
                 sDes = String.format("echo =====update version %s =====\n" +
                                 "cd ./%s/ \n" + "sh backup.sh \n" + "sh update.sh \n" + "cd ../\n\n",
-                        sSub[i].split("_")[3], sSub[i]);
+                        sSub[i], sSub[i]);
                 fosUpdateAll.write(sDes.getBytes());
                 CreateVerAPScript(sTmp);
 
@@ -830,7 +830,7 @@ public class VersionMananger {
             if((!sChild.isFile()) && (sSub[i].startsWith("TLBank_SmartEsb_AP_"))) {
                 sDes = String.format("echo =====recover version %s =====\n" +
                                 "cd ./%s/ \n" + "sh recover.sh \n" + "cd ../\n\n",
-                        sSub[i].split("_")[3], sSub[i]);
+                        sSub[i], sSub[i]);
                 fosRecoverAll.write(sDes.getBytes());
             }
         }
