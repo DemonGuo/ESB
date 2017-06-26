@@ -45,10 +45,10 @@ public class VersionMananger {
         System.out.println("Version Create Time: " + sdfTime);
 
         String sVerTemp = config.GetItemConfig("ver_temp");
-        sRootPath.add(0, String.format("%s/%s/%s/TLBank_SmartEsb_AP_%s_%s", sVerTemp, sDate, "localsvn", sVerName, sTime));
-        sRootPath.add(1, String.format("%s/%s/%s/TLBank_SmartEsb_AP_%s_%s", sVerTemp, sDate, "remotesrc", sVerName, sTime));
-        sRootPath.add(2, String.format("%s/%s/%s/TLBank_SmartEsb_AP_%s_%s", sVerTemp, sDate, "remotedst", sVerName, sTime));
-        sRootPath.add(3, String.format("%s/%s/%s/TLBank_SmartEsb_DB_%s_%s/esbdb", sVerTemp, sDate, "remotedst", sVerName, sTime));
+        sRootPath.add(0, String.format("%s/%s/%s/TLBank_SmartEsb_AP_%s_%s", sVerTemp, sDate, "localsvn", sTime, sVerName));
+        sRootPath.add(1, String.format("%s/%s/%s/TLBank_SmartEsb_AP_%s_%s", sVerTemp, sDate, "remotesrc", sTime, sVerName));
+        sRootPath.add(2, String.format("%s/%s/%s/TLBank_SmartEsb_AP_%s_%s", sVerTemp, sDate, "remotedst", sTime, sVerName));
+        sRootPath.add(3, String.format("%s/%s/%s/TLBank_SmartEsb_DB_%s_%s/esbdb", sVerTemp, sDate, "remotedst", sTime, sVerName));
         return sRootPath;
     }
 
@@ -63,7 +63,6 @@ public class VersionMananger {
                 fPath.mkdirs();
             }
         }
-        return;
     }
 
 

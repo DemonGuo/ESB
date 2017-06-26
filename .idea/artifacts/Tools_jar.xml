@@ -3,24 +3,24 @@
     <output-path>$PROJECT_DIR$/Tools/out/artifacts/Tools_jar</output-path>
     <root id="archive" name="Tools.jar">
       <element id="module-output" name="Tools" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/jxl.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/ojdbc14.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/poi-3.9.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/poi-3.15.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/junit-4.12.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/jsch-0.1.52.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/log4j-1.2.17.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/curvesapi-1.04.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/poi-ooxml-3.15.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/xmlbeans-2.6.0.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/poi-examples-3.15.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/poi-excelant-3.15.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/commons-codec-1.10.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/commons-logging-1.2.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/poi-scratchpad-3.15.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/poi-ooxml-schemas-3.15.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/commons-collections4-4.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/externJar/seaglasslookandfeel-0.1.7.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/jxl.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/ojdbc14.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/poi-3.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/poi-3.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/junit-4.12.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/jsch-0.1.52.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/log4j-1.2.17.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/curvesapi-1.04.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/poi-ooxml-3.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/xmlbeans-2.6.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/poi-examples-3.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/poi-excelant-3.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/commons-codec-1.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/commons-logging-1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/poi-scratchpad-3.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/poi-ooxml-schemas-3.15.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/commons-collections4-4.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/Tools/libs/seaglasslookandfeel-0.1.7.3.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
