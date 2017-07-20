@@ -1,11 +1,11 @@
-JFDML JFormDesigner: "5.2.4.0.321" Java: "1.8.0_25" encoding: "UTF-8"
+JFDML JFormDesigner: "6.0.1.0.112" Java: "1.8.0_152-release" encoding: "UTF-8"
 
 new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq l {space :::p, comp tabbedPane1:::p:693:p, space ::30:x}}"
-			"$verticalGroup": "par l {seq l {comp tabbedPane1:::p:486:p, space :0:25:x}}"
+			"$horizontalGroup": "par l {seq l {space :::p, comp tabbedPane1:::p:693:p, space ::230:x}}"
+			"$verticalGroup": "par l {seq l {comp tabbedPane1:::p:486:p, space :0:169:x}}"
 		} ) {
 			name: "this"
 			"title": "ESB_Tools"
@@ -76,7 +76,6 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "tSrcIP"
 						"border": #EtchedBorder0
-						"editable": false
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "label16"
@@ -85,7 +84,6 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "tDstIP"
 						"border": #EtchedBorder0
-						"editable": false
 					} )
 					add( new FormComponent( "javax.swing.JButton" ) {
 						name: "btn_ChooseSvn"
@@ -115,8 +113,8 @@ new FormModel {
 					"title": "ESB版本打包"
 				} )
 				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-					"$horizontalGroup": "par l {seq {space :::p, par l {seq l {par l:::p {seq l {par l {seq l {comp label1:::p:48:p, space s:::p, comp t_IP:::p:99:p}, seq l {comp label7:::p:103:p, space u:::p, comp t_HeadLen:::p:50:p}}, space s:::p, par l:::p {seq l {comp label2:::p:80:p, space :::x, comp t_PORT:::p:50:p}, seq l {comp label8:::p::p, space u:::p, comp t_RevLen:::p:50:p}}, space :p:60:p}, seq l {comp label3:::p:80:p, space :::x, comp t_Address:::p:314:p, space :::p}}, par l {comp btn_HTTP::::269:x, comp btn_TCP::t:::x}}, seq {comp scrollPane1:::p:103:p, space u:::p, comp list_Env:::p:100:p, space ::96:x, comp btn_:::p:130:p, space s:::p, comp label9:::p::p, space :p:27:p, comp t_Times:::p:56:p, space :p:35:p}, seq l {comp label4:::p:80:p, space :::p, comp scrollPane2::::593:x}}, space :::p}}"
-					"$verticalGroup": "par l {seq t {space :p:14:p, par t {par b:t {comp t_Times::b:p:25:p, comp label9::b:p:25:p, comp btn_::b:p:25:p}, comp scrollPane1::t:p:25:p, comp list_Env::t:p:25:p}, space u:::p, par b {comp label7::b:p:25:p, comp t_HeadLen::b:p:25:p, comp label8::b:p:25:p, comp t_RevLen::b:p:25:p}, space :p:6:p, par b {comp label1::b:p:25:p, comp t_IP::b:p:25:p, comp label2::b:p:24:p, comp btn_TCP::b:p:25:p, comp t_PORT::b:p:24:p}, space :p:7:p, par b {comp label3::b:p:25:p, comp t_Address::b:p:25:p, comp btn_HTTP::b:p:25:p}, space s:::p, par l {comp label4:::p::p, comp scrollPane2:::p:272:p}, space ::28:x}}"
+					"$horizontalGroup": "par l {seq {space :::p, par l {seq l {comp label3:::p:80:p, space :::x, comp t_Address:::p:314:p, space :::p, par l {comp btn_HTTP::::278:x, comp btn_TCP::t:::x}}, seq {comp scrollPane1:::p:103:p, space u:::p, comp list_Env:::p:100:p, space ::102:x, comp btn_:::p:130:p, space s:::p, comp label9:::p::p, space :p:27:p, comp t_Times:::p:56:p, space :p:35:p}, seq l {comp label4:::p:80:p, space :::p, comp scrollPane2::::599:x}, seq l {par l {seq l {comp label1:::p:48:p, space s:::p, comp t_IP:::p:99:p}, seq l {comp label7:::p:103:p, space u:::p, comp t_HeadLen:::p:50:p}}, space s:::p, par l:::p {seq l {comp label2:::p:80:p, space :::x, comp t_PORT:::p:50:p}, seq l {comp label8:::p::p, space u:::p, comp t_RevLen:::p:50:p}}, space u:::p, comp label10:::p::p, space s:::p, comp t_TimeOut:::p:50:p, space ::164:x}}, space :::p}}"
+					"$verticalGroup": "par l {seq t {space :p:14:p, par t {par b:t {comp t_Times::b:p:25:p, comp label9::b:p:25:p, comp btn_::b:p:25:p}, comp scrollPane1::t:p:25:p, comp list_Env::t:p:25:p}, space u:::p, par b {comp label7::b:p:25:p, comp t_HeadLen::b:p:25:p, comp label8::b:p:25:p, comp t_RevLen::b:p:25:p, comp label10::b:p:25:p, comp t_TimeOut::b:p:25:p}, space :p:6:p, par b {comp label1::b:p:25:p, comp t_IP::b:p:25:p, comp label2::b:p:24:p, comp btn_TCP::b:p:25:p, comp t_PORT::b:p:24:p}, space :p:7:p, par b {comp label3::b:p:25:p, comp t_Address::b:p:25:p, comp btn_HTTP::b:p:25:p}, space s:::p, par l {comp label4:::p::p, comp scrollPane2:::p:272:p}, space ::28:x}}"
 				} ) {
 					name: "panel1"
 					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
@@ -160,12 +158,12 @@ new FormModel {
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "label8"
 						"text": "接收报文头长度:"
-						"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color cyan, null )
+						"border": &EtchedBorder2 new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color cyan, null )
 					} )
 					add( new FormComponent( "javax.swing.JTextField" ) {
 						name: "t_RevLen"
 						"text": "8"
-						"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color magenta, null )
+						"border": &EtchedBorder3 new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color magenta, null )
 					} )
 					add( new FormComponent( "javax.swing.JLabel" ) {
 						name: "label1"
@@ -227,6 +225,16 @@ new FormModel {
 							name: "t_AreaRsp"
 							"border": new javax.swing.border.EtchedBorder( 1, sfield java.awt.Color pink, null )
 						} )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label10"
+						"text": "接受超时时间:"
+						"border": #EtchedBorder2
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "t_TimeOut"
+						"text": "60000"
+						"border": #EtchedBorder3
 					} )
 				}, new FormLayoutConstraints( null ) {
 					"title": "ESB报文测试"

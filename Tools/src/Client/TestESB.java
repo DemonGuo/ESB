@@ -87,6 +87,7 @@ public class TestESB extends JFrame {
         int headlen = Integer.parseInt(t_HeadLen.getText().toString());
         int revlen = Integer.parseInt(t_RevLen.getText().toString());
         int times = Integer.parseInt(t_Times.getText().toString());
+        int timeout = Integer.parseInt(t_TimeOut.getText().toString());
         String ip = t_IP.getText();
         String port = t_PORT.getText();
         String ipRegex = "^(1\\d{2}|2[0-4]\\d|25[0-5]|[1-9]\\d|[1-9])\\."
@@ -107,7 +108,7 @@ public class TestESB extends JFrame {
         // 发送报文
         String reqXml = new File("").getAbsolutePath().replace("\\", "/") + "/files/req.xml";
         TestTcp t_dev = new TestTcp();
-        t_dev.Init(ip, Integer.parseInt(port), 10000, headlen, revlen, reqXml);
+        t_dev.Init(ip, Integer.parseInt(port), timeout, headlen, revlen, reqXml);
         try {
             for(int i = 0; i < times; i++) {
                 String resp_dev = t_dev.sendTcpRequest();
@@ -359,6 +360,7 @@ public class TestESB extends JFrame {
         Readfile rf = new Readfile(sConfig);
         Thread thread = new Thread(rf);
         thread.start();
+        JOptionPane.showMessageDialog(this, "配置修改需重启才能完全生效!", "Info", JOptionPane.INFORMATION_MESSAGE);
     }
 
     private void btn_ChooseSvn2ActionPerformed(ActionEvent e) {
@@ -441,6 +443,8 @@ public class TestESB extends JFrame {
         label4 = new JLabel();
         scrollPane2 = new JScrollPane();
         t_AreaRsp = new JTextArea();
+        label10 = new JLabel();
+        t_TimeOut = new JTextField();
         panel3 = new JPanel();
         label11 = new JLabel();
         tf_XlsDict = new JTextField();
@@ -545,14 +549,12 @@ public class TestESB extends JFrame {
 
                 //---- tSrcIP ----
                 tSrcIP.setBorder(new EtchedBorder(Color.green, null));
-                tSrcIP.setEditable(false);
 
                 //---- label16 ----
                 label16.setText("\u76ee\u6807\u7248\u672c\u6240\u5728\u670d\u52a1\u5668:");
 
                 //---- tDstIP ----
                 tDstIP.setBorder(new EtchedBorder(Color.green, null));
-                tDstIP.setEditable(false);
 
                 //---- btn_ChooseSvn ----
                 btn_ChooseSvn.setText("2-\u9009\u62e9\u672c\u5730SVN\u76ee\u5f55");
@@ -786,6 +788,14 @@ public class TestESB extends JFrame {
                     scrollPane2.setViewportView(t_AreaRsp);
                 }
 
+                //---- label10 ----
+                label10.setText("\u63a5\u53d7\u8d85\u65f6\u65f6\u95f4:");
+                label10.setBorder(new EtchedBorder(Color.cyan, null));
+
+                //---- t_TimeOut ----
+                t_TimeOut.setText("60000");
+                t_TimeOut.setBorder(new EtchedBorder(Color.magenta, null));
+
                 GroupLayout panel1Layout = new GroupLayout(panel1);
                 panel1.setLayout(panel1Layout);
                 panel1Layout.setHorizontalGroup(
@@ -794,41 +804,18 @@ public class TestESB extends JFrame {
                             .addContainerGap()
                             .addGroup(panel1Layout.createParallelGroup()
                                 .addGroup(panel1Layout.createSequentialGroup()
-                                    .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                        .addGroup(panel1Layout.createSequentialGroup()
-                                            .addGroup(panel1Layout.createParallelGroup()
-                                                .addGroup(panel1Layout.createSequentialGroup()
-                                                    .addComponent(label1, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE)
-                                                    .addGap(18, 18, 18)
-                                                    .addComponent(t_IP, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(panel1Layout.createSequentialGroup()
-                                                    .addComponent(label7, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                                    .addComponent(t_HeadLen, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)))
-                                            .addGap(18, 18, 18)
-                                            .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
-                                                .addGroup(panel1Layout.createSequentialGroup()
-                                                    .addComponent(label2, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-                                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                    .addComponent(t_PORT, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE))
-                                                .addGroup(panel1Layout.createSequentialGroup()
-                                                    .addComponent(label8)
-                                                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
-                                                    .addComponent(t_RevLen, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)))
-                                            .addGap(60, 60, 60))
-                                        .addGroup(panel1Layout.createSequentialGroup()
-                                            .addComponent(label3, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(t_Address, GroupLayout.PREFERRED_SIZE, 314, GroupLayout.PREFERRED_SIZE)
-                                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)))
+                                    .addComponent(label3, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(t_Address, GroupLayout.PREFERRED_SIZE, 314, GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
                                     .addGroup(panel1Layout.createParallelGroup()
-                                        .addComponent(btn_HTTP, GroupLayout.DEFAULT_SIZE, 269, Short.MAX_VALUE)
+                                        .addComponent(btn_HTTP, GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
                                         .addComponent(btn_TCP, GroupLayout.Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addGroup(panel1Layout.createSequentialGroup()
                                     .addComponent(scrollPane1, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(list_Env, GroupLayout.PREFERRED_SIZE, 100, GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
                                     .addComponent(btn_, GroupLayout.PREFERRED_SIZE, 130, GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
                                     .addComponent(label9)
@@ -838,7 +825,32 @@ public class TestESB extends JFrame {
                                 .addGroup(panel1Layout.createSequentialGroup()
                                     .addComponent(label4, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(scrollPane2, GroupLayout.DEFAULT_SIZE, 593, Short.MAX_VALUE)))
+                                    .addComponent(scrollPane2, GroupLayout.DEFAULT_SIZE, 599, Short.MAX_VALUE))
+                                .addGroup(panel1Layout.createSequentialGroup()
+                                    .addGroup(panel1Layout.createParallelGroup()
+                                        .addGroup(panel1Layout.createSequentialGroup()
+                                            .addComponent(label1, GroupLayout.PREFERRED_SIZE, 48, GroupLayout.PREFERRED_SIZE)
+                                            .addGap(18, 18, 18)
+                                            .addComponent(t_IP, GroupLayout.PREFERRED_SIZE, 99, GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(panel1Layout.createSequentialGroup()
+                                            .addComponent(label7, GroupLayout.PREFERRED_SIZE, 103, GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(t_HeadLen, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(panel1Layout.createSequentialGroup()
+                                            .addComponent(label2, GroupLayout.PREFERRED_SIZE, 80, GroupLayout.PREFERRED_SIZE)
+                                            .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(t_PORT, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(panel1Layout.createSequentialGroup()
+                                            .addComponent(label8)
+                                            .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(t_RevLen, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)))
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(label10)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(t_TimeOut, GroupLayout.PREFERRED_SIZE, 50, GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(LayoutStyle.ComponentPlacement.RELATED, 164, Short.MAX_VALUE)))
                             .addContainerGap())
                 );
                 panel1Layout.setVerticalGroup(
@@ -857,7 +869,9 @@ public class TestESB extends JFrame {
                                 .addComponent(label7, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
                                 .addComponent(t_HeadLen, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
                                 .addComponent(label8, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
-                                .addComponent(t_RevLen, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE))
+                                .addComponent(t_RevLen, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(label10, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(t_TimeOut, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE))
                             .addGap(6, 6, 6)
                             .addGroup(panel1Layout.createParallelGroup(GroupLayout.Alignment.BASELINE)
                                 .addComponent(label1, GroupLayout.PREFERRED_SIZE, 25, GroupLayout.PREFERRED_SIZE)
@@ -1017,13 +1031,13 @@ public class TestESB extends JFrame {
                 .addGroup(contentPaneLayout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(tabbedPane1, GroupLayout.PREFERRED_SIZE, 693, GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(30, Short.MAX_VALUE))
+                    .addContainerGap(230, Short.MAX_VALUE))
         );
         contentPaneLayout.setVerticalGroup(
             contentPaneLayout.createParallelGroup()
                 .addGroup(contentPaneLayout.createSequentialGroup()
                     .addComponent(tabbedPane1, GroupLayout.PREFERRED_SIZE, 486, GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 25, Short.MAX_VALUE))
+                    .addGap(0, 169, Short.MAX_VALUE))
         );
         pack();
         setLocationRelativeTo(getOwner());
@@ -1072,6 +1086,8 @@ public class TestESB extends JFrame {
     private JLabel label4;
     private JScrollPane scrollPane2;
     private JTextArea t_AreaRsp;
+    private JLabel label10;
+    private JTextField t_TimeOut;
     private JPanel panel3;
     private JLabel label11;
     private JTextField tf_XlsDict;
